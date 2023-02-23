@@ -29,9 +29,6 @@ func (e Event) Start() {
 	fmt.Println(msg)
 }
 func main() {
-	message := GetMessage()
-	greeter := GetGreeter(message)
-	event := GetEvent(greeter)
-
+	event := InitializeEvent()
 	event.Start()
 }
