@@ -1,10 +1,11 @@
-//+build wireinject
+//go:build wireinject
+// +build wireinject
 
 package main
 
 import "github.com/google/wire"
 
-func InitializeEvent() Event {
+func InitializeEvent(string) Event {
 	wire.Build(GetMessage, GetGreeter, GetEvent)
 	return Event{}
 }

@@ -12,8 +12,8 @@ type Event struct {
 	Greeter Greeter
 }
 
-func GetMessage() Message {
-	return Message("Hello world!")
+func GetMessage(text string) Message {
+	return Message(text)
 }
 func GetGreeter(m Message) Greeter {
 	return Greeter{Message: m}
@@ -29,6 +29,6 @@ func (e Event) Start() {
 	fmt.Println(msg)
 }
 func main() {
-	event := InitializeEvent()
+	event := InitializeEvent("Hello People!")
 	event.Start()
 }
